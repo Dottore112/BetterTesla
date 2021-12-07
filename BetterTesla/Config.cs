@@ -9,18 +9,15 @@ namespace BetterTesla
         public bool IsEnabled { get; set; } = true;
 
         [Description("Is tesla Enable for MTF? (default = true) [true/false]")]
-        public bool TeslaMTFDisabled  { get; set; } = true;
+        public bool TeslaMTFDisabled { get; set; } = true;
 
         [Description("Is tesla Enable for CHI? (default = false) [true/false]")]
         public bool TeslaCHIDisabled { get; set; } = false;
 
-
-
-
-        [Description ("Is BroadCast Enabled for bypassing tesla for MTF? (default = true) [true/false]")]
+        [Description("Is BroadCast Enabled for bypassing tesla for MTF? (default = true) [true/false]")]
         public bool TeslaMTFBC { get; set; } = true;
 
-        [Description ("Is BroadCast Enabled for bypassing tesla for CHI? (default = true) [true/false]")]
+        [Description("Is BroadCast Enabled for bypassing tesla for CHI? (default = true) [true/false]")]
         public bool TeslaCHIBC { get; set; } = true;
 
         [Description("To Make Change To The Broadcast to the MTF")]
@@ -38,11 +35,7 @@ namespace BetterTesla
         [Description("to change the cassie when all the SCPs are finished and I announce that the tesla is deactivated")]
         public string CassieMessage { get; set; } = "attention SCP 0 4 9 detected access blocked a tesla gate";
 
-        [Description("Cost for triggering TeslaGate for SCP 079")]
-        public int CostTesla { get; set; }  = 1;
-
         [Description("Broadcast pickup item")]
         public Exiled.API.Features.Broadcast PickItemBC { get; set; } = new Exiled.API.Features.Broadcast(" <color=white> THIS ITEM WILL BYPASS TESLA </color>");
-
     }
 }
