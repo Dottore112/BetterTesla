@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterTesla", "BetterTesla\BetterTesla.csproj", "{44AA6CB6-B658-42DD-A3C7-3C450E92D06A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44AA6CB6-B658-42DD-A3C7-3C450E92D06A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44AA6CB6-B658-42DD-A3C7-3C450E92D06A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44AA6CB6-B658-42DD-A3C7-3C450E92D06A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44AA6CB6-B658-42DD-A3C7-3C450E92D06A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5C7B675-9526-457B-8250-7797E93900CD}
+	EndGlobalSection
+EndGlobal
