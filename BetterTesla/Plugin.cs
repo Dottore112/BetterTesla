@@ -36,6 +36,7 @@ namespace BetterTesla
             Handlers = new Handlers();          
             PlayerEvents.TriggeringTesla += Handlers.OnTriggeringTesla;
             PlayerEvents.PickingUpItem += Handlers.PickItem;
+            Exiled.Events.Handlers.Scp079.InteractingTesla += Handlers.Interact079Tesla;
             
             
 
@@ -47,8 +48,11 @@ namespace BetterTesla
         {
             PlayerEvents.TriggeringTesla -= Handlers.OnTriggeringTesla; //using *nome a caso* = Exiled.Events.Handlers.Scp079; serve per registrare gli eventi 
             Handlers.TeslaTimes = 0;     
-            PlayerEvents.PickingUpItem -= Handlers.PickItem;      
+            PlayerEvents.PickingUpItem -= Handlers.PickItem;
+            Exiled.Events.Handlers.Scp079.InteractingTesla -= Handlers.Interact079Tesla;
+
             Handlers = null;
+            
         }
     }
 }

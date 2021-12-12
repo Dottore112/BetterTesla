@@ -33,7 +33,7 @@ namespace BetterTesla
         public bool IfBypassTeslaItem { get; set; } = false;
 
         [Description("If there is a bypassteslaitem, what is that? (default = radio) Example: Coin. List (Pick the Name):https://pastebin.com/RUT27JBU")]
-        public ItemType BypassTeslaItem = ItemType.Radio;
+        public ItemType BypassTeslaItem = ItemType.Coin;
 
         [Description("to change the cassie when all the SCPs are finished and I announce that the tesla is deactivated")]
         public string CassieMessage { get; set; } = "attention SCP 0 4 9 detected access blocked a tesla gate";
@@ -43,6 +43,9 @@ namespace BetterTesla
 
         [Description("Broadcast pickup item")]
         public Exiled.API.Features.Broadcast PickItemBC { get; set; } = new Exiled.API.Features.Broadcast(" <color=white> THIS ITEM WILL BYPASS TESLA </color>");
+
+        [Description("Cost for using Tesla for SCP 079 (default = 50)")]
+        public int TeslaCost079 = 50;
 
     }
 }

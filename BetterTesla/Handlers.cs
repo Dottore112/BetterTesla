@@ -48,11 +48,11 @@ namespace BetterTesla
 
             if (ev.IsTriggerable && ev.IsInHurtingRange)
             {
-                if (ev.Player.IsHuman)
-                {
-                    ev.Player.EnableEffect(Exiled.API.Enums.EffectType.Burned, 3);
-                    ev.Player.EnableEffect(Exiled.API.Enums.EffectType.Deafened, 3);
-                }
+                
+                
+               ev.Player.EnableEffect(Exiled.API.Enums.EffectType.Burned, 2);
+               ev.Player.EnableEffect(Exiled.API.Enums.EffectType.Deafened, 2);
+                
             }
         }
 
@@ -66,9 +66,22 @@ namespace BetterTesla
 
 
 
-
+        public void Interact079Tesla(InteractingTeslaEventArgs ev)
+        {
+            
+            ev.AuxiliaryPowerCost = Plugin.Singleton.Config.TeslaCost079;
+            /*if (TeslaTimes >= 5) {
+                ev.IsAllowed = false;
+            } else  if (TeslaTimes < 5) {
+                ev.IsAllowed = true;
+            }
+            */
+        }
     }
+    
 }
+ 
+
         
     
 
