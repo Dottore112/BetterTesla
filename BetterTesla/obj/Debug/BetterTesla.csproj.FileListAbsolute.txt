@@ -1,6 +1,5 @@
 C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\BetterTesla.dll
 C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\BetterTesla.pdb
-C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\Assembly-CSharp-firstpass.dll
 C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\CommandSystem.Core.dll
 C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\Exiled.API.dll
 C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\Exiled.CreditTags.dll
@@ -15,7 +14,6 @@ C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug
 C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\UnityEngine.AudioModule.dll
 C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\UnityEngine.CoreModule.dll
 C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\UnityEngine.dll
-C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\UnityEngine.Networking.dll
 C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\UnityEngine.PhysicsModule.dll
 C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\System.Memory.dll
 C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\System.Buffers.dll
@@ -25,4 +23,16 @@ C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\obj\Debug
 C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\obj\Debug\BetterTesla.csproj.CopyComplete
 C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\obj\Debug\BetterTesla.dll
 C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\obj\Debug\BetterTesla.pdb
-C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\Assembly-CSharp-Publicized.dll
+C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\Assembly-CSharp-firstpass(1).dll
+C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\Assembly-CSharp-Publicized(1).dll
+C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\Exiled.Bootstrap.dll
+C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\Exiled.CustomRoles.dll
+C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\Exiled.API.xml
+C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\Exiled.Bootstrap.xml
+C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\Exiled.CreditTags.xml
+C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\Exiled.CustomItems.xml
+C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\Exiled.CustomRoles.xml
+C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\Exiled.Events.xml
+C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\Exiled.Loader.xml
+C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\Exiled.Permissions.xml
+C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\bin\Debug\Exiled.Updater.xml

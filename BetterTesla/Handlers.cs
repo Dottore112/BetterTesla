@@ -1,20 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Exiled.API;
-using Exiled.API.Features;
+﻿using Exiled.API.Features;
 using Exiled.Events.EventArgs;
+using System;
 using Handlers = Exiled.Events.Handlers;
-using Exiled.Events;
-using MEC;
+using Exiled.API.Enums;
 
 namespace BetterTesla
 {
     public class Handlers
     {
         public int TeslaTimes;
+
+         public void Dying(DyingEventArgs ev)
+        {
+            if(ev.Handler.Type == DamageType.Tesla && Plugin.Singleton.Config.InventoryErase)
+            {
+                ev.Target.ClearInventory();
+            }
+        }
 
         public void OnTriggeringTesla(TriggeringTeslaEventArgs ev)
         {
@@ -63,19 +65,23 @@ namespace BetterTesla
             ev.Player.Broadcast(Plugin.Singleton.Config.PickItemBC.Duration, Plugin.Singleton.Config.PickItemBC.Content, Broadcast.BroadcastFlags.Normal, true);
         }
 
-
+        
 
 
         public void Interact079Tesla(InteractingTeslaEventArgs ev)
         {
             
             ev.AuxiliaryPowerCost = Plugin.Singleton.Config.TeslaCost079;
-            /*if (TeslaTimes >= 5) {
+
+        if (Plugin.Singleton.Config.IfTesla079Limit) {
+            if (TeslaTimes >= Plugin.Singleton.Config.Tesla079Limit) {
                 ev.IsAllowed = false;
-            } else  if (TeslaTimes < 5) {
+            } else  if (TeslaTimes < Plugin.Singleton.Config.Tesla079Limit) {
                 ev.IsAllowed = true;
+                TeslaTimes++;
             }
-            */
+            
+        }
         }
     }
     

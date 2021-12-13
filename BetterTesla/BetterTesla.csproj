@@ -37,36 +37,41 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\Downloads\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Reference\Assembly-CSharp-firstpass.dll</HintPath>
+    <Reference Include="Assembly-CSharp-firstpass%281%29">
+      <HintPath>..\..\..\..\..\Downloads\Assembly-CSharp-firstpass(1).dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-CSharp-Publicized">
-      <HintPath>..\..\..\Reference\Assembly-CSharp-Publicized.dll</HintPath>
+    <Reference Include="Assembly-CSharp-Publicized%281%29">
+      <HintPath>..\..\..\..\..\Downloads\Assembly-CSharp-Publicized(1).dll</HintPath>
     </Reference>
     <Reference Include="CommandSystem.Core">
       <HintPath>..\..\..\Reference\CommandSystem.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Exiled.API">
-      <HintPath>..\..\..\Reference\Exiled.API.dll</HintPath>
+    <Reference Include="Exiled.API, Version=4.1.5.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\EXILED.4.1.5\lib\net472\Exiled.API.dll</HintPath>
     </Reference>
-    <Reference Include="Exiled.CreditTags">
-      <HintPath>..\..\..\Reference\Exiled.CreditTags.dll</HintPath>
+    <Reference Include="Exiled.Bootstrap, Version=4.1.5.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\EXILED.4.1.5\lib\net472\Exiled.Bootstrap.dll</HintPath>
     </Reference>
-    <Reference Include="Exiled.CustomItems">
-      <HintPath>..\..\..\Reference\Exiled.CustomItems.dll</HintPath>
+    <Reference Include="Exiled.CreditTags, Version=4.1.5.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\EXILED.4.1.5\lib\net472\Exiled.CreditTags.dll</HintPath>
     </Reference>
-    <Reference Include="Exiled.Events">
-      <HintPath>..\..\..\Reference\Exiled.Events.dll</HintPath>
+    <Reference Include="Exiled.CustomItems, Version=4.1.5.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\EXILED.4.1.5\lib\net472\Exiled.CustomItems.dll</HintPath>
     </Reference>
-    <Reference Include="Exiled.Loader">
-      <HintPath>..\..\..\Reference\Exiled.Loader.dll</HintPath>
+    <Reference Include="Exiled.CustomRoles, Version=4.1.5.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\EXILED.4.1.5\lib\net472\Exiled.CustomRoles.dll</HintPath>
     </Reference>
-    <Reference Include="Exiled.Permissions">
-      <HintPath>..\..\..\Reference\Exiled.Permissions.dll</HintPath>
+    <Reference Include="Exiled.Events, Version=4.1.5.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\EXILED.4.1.5\lib\net472\Exiled.Events.dll</HintPath>
     </Reference>
-    <Reference Include="Exiled.Updater">
-      <HintPath>..\..\..\Reference\Exiled.Updater.dll</HintPath>
+    <Reference Include="Exiled.Loader, Version=4.1.5.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\EXILED.4.1.5\lib\net472\Exiled.Loader.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.Permissions, Version=4.1.5.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\EXILED.4.1.5\lib\net472\Exiled.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.Updater, Version=3.1.1.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\EXILED.4.1.5\lib\net472\Exiled.Updater.dll</HintPath>
     </Reference>
     <Reference Include="Mirror">
       <HintPath>..\..\..\Reference\Mirror.dll</HintPath>
@@ -88,14 +93,8 @@
     <Reference Include="UnityEngine.AnimationModule">
       <HintPath>..\..\..\Reference\UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.AudioModule">
-      <HintPath>..\..\..\Reference\UnityEngine.AudioModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\..\..\Reference\UnityEngine.CoreModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>..\..\..\Reference\UnityEngine.Networking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
       <HintPath>..\..\..\Reference\UnityEngine.PhysicsModule.dll</HintPath>
@@ -109,6 +108,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
