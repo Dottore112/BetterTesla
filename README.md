@@ -3,7 +3,7 @@ This plugin permits to customize the teslas. Here all the functions:
 
 
 
-## Bypassing Tesla
+### Bypassing Tesla
 - You can set broadcasts for bypassing tesla for the team or the item bypass
 - You can set an item that bypass the tesla if holded
 - You can set if CHI or MTF will bypass the teslas
