@@ -5,6 +5,7 @@ using HandlersS = Exiled.Events.Handlers;
 using Effect = CustomPlayerEffects.Deafened;
 using Effect1 = CustomPlayerEffects.Burned;
 
+
 namespace BetterTesla
 {
     public class Plugin : Plugin<Config>
@@ -21,6 +22,7 @@ namespace BetterTesla
             RegisterEvents();
             base.OnEnabled();
             Handlers.TeslaTimes = 0;
+            Handlers.ActivatedTeslas = true;
         }
 
         
@@ -38,6 +40,9 @@ namespace BetterTesla
             PlayerEvents.PickingUpItem += Handlers.PickItem;
             PlayerEvents.Dying += Handlers.Dying;
             Exiled.Events.Handlers.Scp079.InteractingTesla += Handlers.Interact079Tesla;
+            PlayerEvents.ChangingRole += Handlers.ChangingRole;
+            ServerEvents.RoundStarted += Handlers.OnStartedRound;
+            PlayerEvents.Died += Handlers.Died;
             
             
 
@@ -52,6 +57,10 @@ namespace BetterTesla
             PlayerEvents.PickingUpItem -= Handlers.PickItem;
             PlayerEvents.Dying -= Handlers.Dying;
             Exiled.Events.Handlers.Scp079.InteractingTesla -= Handlers.Interact079Tesla;
+            PlayerEvents.ChangingRole -= Handlers.ChangingRole;
+            ServerEvents.RoundStarted -= Handlers.OnStartedRound;
+            PlayerEvents.Died -= Handlers.Died;
+
 
             Handlers = null;
             

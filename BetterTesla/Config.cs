@@ -32,11 +32,8 @@ namespace BetterTesla
         [Description("There is an Item that bypass the Teslas? (default = false) [true/false]")]
         public bool IfBypassTeslaItem { get; set; } = false;
 
-        [Description("If there is a bypassteslaitem, what is that? (default = radio) Example: Coin. List (Pick the Name):https://pastebin.com/RUT27JBU")]
+        [Description("If there is a bypassteslaitem, what is that? (default = coin) Example: Coin. List (Pick the Name):https://pastebin.com/RUT27JBU")]
         public ItemType BypassTeslaItem { get; set; }= ItemType.Coin;
-
-        [Description("to change the cassie when all the SCPs are finished and I announce that the tesla is deactivated")]
-        public string CassieMessage { get; set; } = "attention SCP 0 4 9 detected access blocked a tesla gate";
 
         [Description("Broadcast pickup item")]
         public Exiled.API.Features.Broadcast PickItemBC { get; set; } = new Exiled.API.Features.Broadcast(" <color=white> THIS ITEM WILL BYPASS TESLA </color>");
@@ -52,6 +49,22 @@ namespace BetterTesla
 
         [Description("If Teslas079Limit is true, set the limit for 079 (default = 15)")]
         public int Tesla079Limit { get; set; }= 15;
+
+        [Description("If there isn't any SCP left, should be the teslas disabled? (default = false)")]
+        public bool TeslaDisableAtNoScp { get; set; }= false;
+
+        [Description("When the round starts, the plugin should do a cassie about the activated teslas? (default = false)")]
+        public bool CassieAtStart { get; set; } = false;
+
+        [Description("Cassie when the round starts")]
+        public string CassieAtStartMessage { get; set; } = "cassie_sl .g1 .g2 pitch_0.4 .g4 .g4 .g4 .g4 pitch_1.0 Attention breach containment detected automatic security sistem tesla gate is now enabled pitch_0.4 .g4 .g4 .g3";
+
+        [Description("Cassie enabled for scp termination - tesla disabled? (default = false)")]
+        public bool IfTerminatedScpCassie { get; set; } = false;
+
+        [Description("Cassie if the scp got terminated")]
+        public string TerminatedScpCassie { get; set; } = "cassie_sl .g1 .g2 pitch_0.4 .g4 .g4 .g4 .g4 All the scp got terminated. automatic security sistem tesla gate is now disabled pitch_0.4 .g4 .g4 .g3 ";
+
 
     }
 }
