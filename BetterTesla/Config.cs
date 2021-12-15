@@ -53,17 +53,6 @@ namespace BetterTesla
         [Description("If there isn't any SCP left, should be the teslas disabled? (default = false)")]
         public bool TeslaDisableAtNoScp { get; set; }= false;
 
-        [Description("When the round starts, the plugin should do a cassie about the activated teslas? (default = false)")]
-        public bool CassieAtStart { get; set; } = false;
-
-        [Description("Cassie when the round starts")]
-        public string CassieAtStartMessage { get; set; } = "cassie_sl .g1 .g2 pitch_0.4 .g4 .g4 .g4 .g4 pitch_1.0 Attention breach containment detected automatic security sistem tesla gate is now enabled pitch_0.4 .g4 .g4 .g3";
-
-        [Description("Cassie enabled for scp termination - tesla disabled? (default = false)")]
-        public bool IfTerminatedScpCassie { get; set; } = false;
-
-        [Description("Cassie if the scp got terminated")]
-        public string TerminatedScpCassie { get; set; } = "cassie_sl .g1 .g2 pitch_0.4 .g4 .g4 .g4 .g4 All the scp got terminated. automatic security sistem tesla gate is now disabled pitch_0.4 .g4 .g4 .g3 ";
 
 
     }

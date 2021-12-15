@@ -17,12 +17,11 @@ namespace BetterTesla
         public override void OnEnabled()
         {
             Singleton = this;
-
             Handlers = new Handlers();
             RegisterEvents();
             base.OnEnabled();
             Handlers.TeslaTimes = 0;
-            Handlers.ActivatedTeslas = true;
+        
         }
 
         
@@ -35,14 +34,11 @@ namespace BetterTesla
 
         private void RegisterEvents()
         {
-            Handlers = new Handlers();          
+                      
             PlayerEvents.TriggeringTesla += Handlers.OnTriggeringTesla;
             PlayerEvents.PickingUpItem += Handlers.PickItem;
             PlayerEvents.Dying += Handlers.Dying;
             Exiled.Events.Handlers.Scp079.InteractingTesla += Handlers.Interact079Tesla;
-            PlayerEvents.ChangingRole += Handlers.ChangingRole;
-            ServerEvents.RoundStarted += Handlers.OnStartedRound;
-            PlayerEvents.Died += Handlers.Died;
             
             
 
@@ -57,10 +53,6 @@ namespace BetterTesla
             PlayerEvents.PickingUpItem -= Handlers.PickItem;
             PlayerEvents.Dying -= Handlers.Dying;
             Exiled.Events.Handlers.Scp079.InteractingTesla -= Handlers.Interact079Tesla;
-            PlayerEvents.ChangingRole -= Handlers.ChangingRole;
-            ServerEvents.RoundStarted -= Handlers.OnStartedRound;
-            PlayerEvents.Died -= Handlers.Died;
-
 
             Handlers = null;
             
