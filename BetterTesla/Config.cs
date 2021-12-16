@@ -8,11 +8,14 @@ namespace BetterTesla
         [Description("Enable/Disable the Plugin.")]
         public bool IsEnabled { get; set; } = true;
 
-        [Description("Is tesla Enable for MTF? (default = true) [true/false]")]
+        [Description("Is tesla Disabled for MTF? (default = true) [true/false]")]
         public bool TeslaMTFDisabled  { get; set; } = true;
 
-        [Description("Is tesla Enable for CHI? (default = false) [true/false]")]
+        [Description("Is tesla Disabled for CHI? (default = false) [true/false]")]
         public bool TeslaCHIDisabled { get; set; } = false;
+
+        [Description("Is tesla Disabled for Tutorial? (default = false) [true/false]")]
+        public bool TeslaTUTDisabled { get; set; } = false;
 
 
 

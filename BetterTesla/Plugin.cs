@@ -18,6 +18,7 @@ namespace BetterTesla
         {
             Singleton = this;
             Handlers = new Handlers();
+            Handlers.ActivatedTeslas = true;
             RegisterEvents();
             base.OnEnabled();
             Handlers.TeslaTimes = 0;

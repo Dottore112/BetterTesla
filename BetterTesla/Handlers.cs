@@ -11,6 +11,7 @@ namespace BetterTesla
     public class Handlers
     {
         public int TeslaTimes;
+        public static bool ActivatedTeslas;
 
          public void Dying(DyingEventArgs ev)
          {
@@ -23,6 +24,11 @@ namespace BetterTesla
 
         public void OnTriggeringTesla(TriggeringTeslaEventArgs ev)
         {
+            if(!ActivatedTeslas) {
+                ev.IsTriggerable = false;
+            } else {
+                ev.IsTriggerable = true;
+            }
             if(Plugin.Singleton.Config.TeslaDisableAtNoScp && Player.Get(Team.SCP).Count() == 0) 
             {
                 ev.IsTriggerable = false;
@@ -45,12 +51,19 @@ namespace BetterTesla
 
             }
 
+            if (ev.Player.Team == Team.TUT && Plugin.Singleton.Config.TeslaTUTDisabled)
+            {
+                ev.IsTriggerable = false;
+            }
+
            if (ev.Player.CurrentItem != null) {
                 if (ev.Player.CurrentItem.Type == Plugin.Singleton.Config.BypassTeslaItem && Plugin.Singleton.Config.IfBypassTeslaItem == true)
                 {
                     ev.IsTriggerable = false;
                 }
            }
+
+            
         }
 
         public void PickItem(PickingUpItemEventArgs ev) {
@@ -63,7 +76,7 @@ namespace BetterTesla
 
 
         
-
+         
 
         public void Interact079Tesla(InteractingTeslaEventArgs ev)
         {
