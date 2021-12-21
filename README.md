@@ -18,3 +18,4 @@ This plugin permits to customize the teslas. Here all the functions:
 
 ## Commands
 - ToggleTeslas: You can toggle teslas (Active it/Disable it)
+- ToggleTeslaTeam: You can toggle teslas for teams (Active it/Disable it)
