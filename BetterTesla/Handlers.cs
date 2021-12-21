@@ -12,6 +12,11 @@ namespace BetterTesla
     {
         public int TeslaTimes;
         public static bool ActivatedTeslas;
+        public static bool SCPActivated;
+        public static bool MTFActivated;
+        public static bool DBoiActivated;
+        public static bool CHIActivated;
+        public static bool SciActivated;
 
          public void Dying(DyingEventArgs ev)
          {
@@ -29,7 +34,25 @@ namespace BetterTesla
             } else {
                 ev.IsTriggerable = true;
             }
-            if(Plugin.Singleton.Config.TeslaDisableAtNoScp && Player.Get(Team.SCP).Count() == 0) 
+
+            if(!CHIActivated && ev.Player.Team == Team.CHI)
+               ev.IsTriggerable = false;
+
+            if (!SciActivated && ev.Player.Team == Team.RSC)
+                ev.IsTriggerable = false;
+
+            if (!DBoiActivated && ev.Player.Team == Team.CDP)
+                ev.IsTriggerable = false;
+
+            if (!MTFActivated && ev.Player.Team == Team.MTF)
+                ev.IsTriggerable = false;
+
+            if (!SCPActivated && ev.Player.Team == Team.SCP)
+                ev.IsTriggerable = false;
+
+
+
+            if (Plugin.Singleton.Config.TeslaDisableAtNoScp && Player.Get(Team.SCP).Count() == 0) 
             {
                 ev.IsTriggerable = false;
             }
@@ -97,7 +120,3 @@ namespace BetterTesla
     
 }
  
-
-        
-    
-

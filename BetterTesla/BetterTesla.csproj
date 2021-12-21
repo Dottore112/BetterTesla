@@ -101,6 +101,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\ToggleTeslaTeam.cs" />
     <Compile Include="Commands\DisableTeslas.cs" />
     <Compile Include="Handlers.cs" />
     <Compile Include="Config.cs" />

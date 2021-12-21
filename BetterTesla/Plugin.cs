@@ -11,6 +11,7 @@ namespace BetterTesla
     public class Plugin : Plugin<Config>
     {
         public Handlers Handlers { get; private set; }
+        public Handlers H { get; private set; }
 
         public static Plugin Singleton;
 
@@ -22,7 +23,16 @@ namespace BetterTesla
             RegisterEvents();
             base.OnEnabled();
             Handlers.TeslaTimes = 0;
-        
+            ActivatedTeams();
+        }
+
+        public void ActivatedTeams() 
+        {
+              Handlers.MTFActivated = true;
+              Handlers.CHIActivated = true;
+              Handlers.SCPActivated = true;
+              Handlers.SciActivated = true;
+              Handlers.DBoiActivated = true;
         }
 
         
