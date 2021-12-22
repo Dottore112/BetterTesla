@@ -61,7 +61,7 @@ namespace BetterTesla
             {
                 ev.IsTriggerable = false;
 
-                if (Plugin.Singleton.Config.TeslaMTFBC == true)
+                if (Plugin.Singleton.Config.TeslaMTFBC)
                     ev.Player.Broadcast(Plugin.Singleton.Config.TeslaMTF.Duration, Plugin.Singleton.Config.TeslaMTF.Content, Broadcast.BroadcastFlags.Normal, true);
             }
 
@@ -80,7 +80,7 @@ namespace BetterTesla
             }
 
            if (ev.Player.CurrentItem != null) {
-                if (ev.Player.CurrentItem.Type == Plugin.Singleton.Config.BypassTeslaItem && Plugin.Singleton.Config.IfBypassTeslaItem == true)
+                if (ev.Player.CurrentItem.Type == Plugin.Singleton.Config.BypassTeslaItem && Plugin.Singleton.Config.IfBypassTeslaItem)
                 {
                     ev.IsTriggerable = false;
                 }

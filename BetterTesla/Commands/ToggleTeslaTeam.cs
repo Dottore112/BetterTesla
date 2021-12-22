@@ -33,58 +33,69 @@ namespace BetterTesla.Commands
             } else {
                 switch (arguments.At(0)) {
                     case "CHI": 
+                    string Toggled;
                       if(Handlers.CHIActivated) {
                            Handlers.CHIActivated = false;
+                           Toggled = "disabled";
                       } else {
                           Handlers.CHIActivated = true;
+                          Toggled = "enabled";
                       }
-                      response = "The tesla has been toggled for that team";
+                      response = "The tesla has been " + Toggled + " for that team";
                       return true;
                     case "MTF":
                         if (Handlers.MTFActivated)
                         {
                             Handlers.MTFActivated = false;
+                            Toggled = "disabled";
                         }
                         else
                         {
                             Handlers.MTFActivated = true;
+                            Toggled = "enabled";
                         }
-                        response = "The tesla has been toggled for that team";
+                        response = "The tesla has been " + Toggled + " for that team";
                         return true;
                     case "SCI":
                         if (Handlers.SciActivated)
                         {
                             Handlers.SciActivated = false;
+                            Toggled = "disabled";
                         }
                         else
                         {
                             Handlers.SciActivated = true;
+                            Toggled = "enabled";
                         }
-                        response = "The tesla has been toggled for that team";
+                        response = "The tesla has been " + Toggled + " for that team";
                         return true;
                         
-                    case "DBoi":
+                    case "DBOI":
                         if (Handlers.DBoiActivated)
                         {
                             Handlers.DBoiActivated = false;
+                            Toggled = "disabled";
                         }
                         else
                         {
                             Handlers.DBoiActivated = true;
+                            Toggled = "enabled";
                         }
-                        response = "The tesla has been toggled for that team";
+                        response = "The tesla has been " + Toggled + " for that team";
                         return true;
                         
                     case "SCP":
                         if (Handlers.SCPActivated)
                         {
                             Handlers.SCPActivated = false;
+                            Toggled = "disabled";
                         }
                         else
                         {
                             Handlers.SCPActivated = true;
+                            Toggled = "enabled";
                         }
-                        response = "The tesla has been toggled for that team";
+                        response = "The tesla has been " + Toggled + " for that team";
                         return true;
                         
                     default: 
