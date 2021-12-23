@@ -23,7 +23,7 @@ namespace BetterTesla
             Singleton = this;
             Handlers = new Handlers();
             RegisterEvents();
-            DefaultVariables();
+            SetVariables();
             base.OnEnabled();
         }
 
@@ -50,13 +50,17 @@ namespace BetterTesla
             Handlers = null;
         }
 
-        public void DefaultVariables()
+        public void SetVariables()
         {
             Handlers.Tesla079 = 0;
             Handlers.ActivatedTeslas = true;
 
             Team[] DefTeam = {Team.MTF, Team.CHI, Team.RSC, Team.SCP, Team.CDP};
             Handlers.EnabledTeslaTeams = new HashSet<Team>(DefTeam);
+            foreach (Team Team in Plugin.Singleton.Config.NoTriggerTesla) 
+            {
+                Handlers.EnabledTeslaTeams.Remove(Team);
+            }
         }  
     }
 }

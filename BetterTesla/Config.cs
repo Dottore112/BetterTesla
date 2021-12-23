@@ -1,6 +1,7 @@
 ﻿using Exiled.API.Interfaces;
 using System.ComponentModel;
 using BC = Exiled.API.Features.Broadcast;
+using System.Collections.Generic;
 
 namespace BetterTesla
 {
@@ -9,20 +10,13 @@ namespace BetterTesla
         [Description("Enable/Disable the Plugin.")]
         public bool IsEnabled { get; set; } = true;
 
-        [Description("Is tesla Disabled for MTF? (default = true) [true/false]")]
-        public bool TeslaMTFDisabled  { get; set; } = true;
+        [Description("Teams that should not active the teslas. Teams here: https://controlc.com/4ff2b452")]
+        public List<Team> NoTriggerTesla { get; set; } = new List<Team>() { Team.MTF };
 
-        [Description("Is tesla Disabled for CHI? (default = false) [true/false]")]
-        public bool TeslaCHIDisabled { get; set; } = false;
-
-        [Description("Is tesla Disabled for Tutorial? (default = false) [true/false]")]
-        public bool TeslaTUTDisabled { get; set; } = false;
-
-
-        [Description ("Is BroadCast Enabled for bypassing tesla for MTF? (default = true) [true/false]")]
+        [Description("Is BroadCast Enabled for bypassing tesla for MTF? (default = true) [true/false]")]
         public bool TeslaMTFBC { get; set; } = true;
 
-        [Description ("Is BroadCast Enabled for bypassing tesla for CHI? (default = true) [true/false]")]
+        [Description("Is BroadCast Enabled for bypassing tesla for CHI? (default = true) [true/false]")]
         public bool TeslaCHIBC { get; set; } = true;
 
         [Description("To Make Change To The Broadcast to the MTF")]

@@ -31,28 +31,11 @@ namespace BetterTesla
             if (Plugin.Singleton.Config.TeslaDisableAtNoScp && Player.Get(Team.SCP).Count() == 0) 
                 ev.IsTriggerable = false;
 
-            if (ev.Player.IsNTF && Plugin.Singleton.Config.TeslaMTFDisabled)
+            if (ev.Player.CurrentItem != null) 
             {
-                ev.IsTriggerable = false;
-                if(Plugin.Singleton.Config.TeslaMTFBC)
-                    ev.Player.Broadcast(Plugin.Singleton.Config.TeslaMTF.Duration, Plugin.Singleton.Config.TeslaMTF.Content, Broadcast.BroadcastFlags.Normal, true);
-            }
-
-            if (ev.Player.IsCHI && Plugin.Singleton.Config.TeslaCHIDisabled)
-            {
-                ev.IsTriggerable = false;
-                if (Plugin.Singleton.Config.TeslaCHIBC)
-                    ev.Player.Broadcast(Plugin.Singleton.Config.TeslaCHI.Duration, Plugin.Singleton.Config.TeslaCHI.Content, Broadcast.BroadcastFlags.Normal, true);
-            }
-
-            if (ev.Player.Team == Team.TUT && Plugin.Singleton.Config.TeslaTUTDisabled)
-                ev.IsTriggerable = false;
-
-           if (ev.Player.CurrentItem != null) 
-           {
                 if (ev.Player.CurrentItem.Type == Plugin.Singleton.Config.BypassTeslaItem && Plugin.Singleton.Config.IfBypassTeslaItem)
                     ev.IsTriggerable = false;
-           }
+            }
         }
         
         public void PickItem(PickingUpItemEventArgs ev) 
