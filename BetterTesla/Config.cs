@@ -1,5 +1,6 @@
 ﻿using Exiled.API.Interfaces;
 using System.ComponentModel;
+using BC = Exiled.API.Features.Broadcast;
 
 namespace BetterTesla
 {
@@ -18,8 +19,6 @@ namespace BetterTesla
         public bool TeslaTUTDisabled { get; set; } = false;
 
 
-
-
         [Description ("Is BroadCast Enabled for bypassing tesla for MTF? (default = true) [true/false]")]
         public bool TeslaMTFBC { get; set; } = true;
 
@@ -27,10 +26,10 @@ namespace BetterTesla
         public bool TeslaCHIBC { get; set; } = true;
 
         [Description("To Make Change To The Broadcast to the MTF")]
-        public Exiled.API.Features.Broadcast TeslaMTF { get; set; } = new Exiled.API.Features.Broadcast(" <b><color=red> TESLA GATE DISABLED FOR MTF </color></b>");
+        public BC TeslaMTF { get; set; } = new BC(" <b><color=red> TESLA GATE DISABLED FOR MTF </color></b>");
 
         [Description("To Make Change To The Broadcast to the CHI")]
-        public Exiled.API.Features.Broadcast TeslaCHI { get; set; } = new Exiled.API.Features.Broadcast(" <b><color=green> TESLA GATE DISABLED FOR CHI </color></b>");
+        public BC TeslaCHI { get; set; } = new BC(" <b><color=green> TESLA GATE DISABLED FOR CHI </color></b>");
 
         [Description("There is an Item that bypass the Teslas? (default = false) [true/false]")]
         public bool IfBypassTeslaItem { get; set; } = false;
@@ -55,8 +54,5 @@ namespace BetterTesla
 
         [Description("If there isn't any SCP left, should be the teslas disabled? (default = false)")]
         public bool TeslaDisableAtNoScp { get; set; }= false;
-
-
-
     }
 }

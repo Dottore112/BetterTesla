@@ -3,6 +3,7 @@ using PlayerEvents = Exiled.Events.Handlers.Player;
 using ServerEvents = Exiled.Events.Handlers.Server;
 using Scp079Handler = Exiled.Events.Handlers.Scp079;
 using System;
+using System.Collections.Generic;
 
 namespace BetterTesla
 {
@@ -51,18 +52,11 @@ namespace BetterTesla
 
         public void DefaultVariables()
         {
-            Handlers.TeslaTimes = 0;
-            ActivatedTeams();
+            Handlers.Tesla079 = 0;
             Handlers.ActivatedTeslas = true;
-        }
 
-        public void ActivatedTeams()
-        {
-            Handlers.MTFActivated = true;
-            Handlers.CHIActivated = true;
-            Handlers.SCPActivated = true;
-            Handlers.SciActivated = true;
-            Handlers.DBoiActivated = true;
-        }
+            Team[] DefTeam = {Team.MTF, Team.CHI, Team.RSC, Team.SCP, Team.CDP};
+            Handlers.EnabledTeslaTeams = new HashSet<Team>(DefTeam);
+        }  
     }
 }

@@ -1,23 +1,23 @@
 ﻿using System;
-    using System.Linq;
-
-    using CommandSystem;
-
-    using Exiled.API.Features;
-    using Exiled.API.Features.Items;
-
-    using RemoteAdmin;
-    using Exiled.Permissions.Extensions;
+using System.Linq;
+using CommandSystem;
+using System.Collections.Generic;
+using Exiled.API.Features;
+using Exiled.API.Features.Items;
+using RemoteAdmin;
+using Exiled.Permissions.Extensions;
 
 namespace BetterTesla.Commands
 {
     [CommandHandler(typeof(RemoteAdminCommandHandler))]
     class ToggleTeslaTeam : ICommand
     {
+        HashSet<Team> EnabledTeslaTeam = Handlers.EnabledTeslaTeams;
+        
         public Handlers Handlers { get; private set; }
-       public string Command { get; } = "toggleteslateam";
+        public string Command { get; } = "toggleteslateam";
 
-       public string[] Aliases { get; } = new string[] { "tggttm", "togglettm", "toggleteslatm", "tggteslateam" };
+        public string[] Aliases { get; } = new string[] { "tggttm", "togglettm", "toggleteslatm", "tggteslateam" };
 
         public string Description { get; } = "A command for disabling teslas for teams";
 
@@ -34,65 +34,65 @@ namespace BetterTesla.Commands
                 switch (arguments.At(0)) {
                     case "CHI": 
                     string Toggled;
-                      if(Handlers.CHIActivated) {
-                           Handlers.CHIActivated = false;
+                      if(EnabledTeslaTeam.Contains(Team.CHI)) {
+                           EnabledTeslaTeam.Remove(Team.CHI);
                            Toggled = "disabled";
                       } else {
-                          Handlers.CHIActivated = true;
+                          EnabledTeslaTeam.Add(Team.CHI);
                           Toggled = "enabled";
                       }
                       response = "The tesla has been " + Toggled + " for that team";
                       return true;
                     case "MTF":
-                        if (Handlers.MTFActivated)
+                        if (EnabledTeslaTeam.Contains(Team.MTF))
                         {
-                            Handlers.MTFActivated = false;
+                            EnabledTeslaTeam.Remove(Team.MTF);
                             Toggled = "disabled";
                         }
                         else
                         {
-                            Handlers.MTFActivated = true;
+                            EnabledTeslaTeam.Add(Team.MTF);
                             Toggled = "enabled";
                         }
                         response = "The tesla has been " + Toggled + " for that team";
                         return true;
                     case "SCI":
-                        if (Handlers.SciActivated)
+                        if (EnabledTeslaTeam.Contains(Team.RSC))
                         {
-                            Handlers.SciActivated = false;
+                            EnabledTeslaTeam.Remove(Team.RSC);
                             Toggled = "disabled";
                         }
                         else
                         {
-                            Handlers.SciActivated = true;
+                            EnabledTeslaTeam.Add(Team.RSC);
                             Toggled = "enabled";
                         }
                         response = "The tesla has been " + Toggled + " for that team";
                         return true;
                         
                     case "DBOI":
-                        if (Handlers.DBoiActivated)
+                        if (EnabledTeslaTeam.Contains(Team.CDP))
                         {
-                            Handlers.DBoiActivated = false;
+                            EnabledTeslaTeam.Remove(Team.CDP);
                             Toggled = "disabled";
                         }
                         else
                         {
-                            Handlers.DBoiActivated = true;
+                            EnabledTeslaTeam.Add(Team.CDP);
                             Toggled = "enabled";
                         }
                         response = "The tesla has been " + Toggled + " for that team";
                         return true;
                         
                     case "SCP":
-                        if (Handlers.SCPActivated)
+                        if (EnabledTeslaTeam.Contains(Team.SCP))
                         {
-                            Handlers.SCPActivated = false;
+                            EnabledTeslaTeam.Remove(Team.SCP);
                             Toggled = "disabled";
                         }
                         else
                         {
-                            Handlers.SCPActivated = true;
+                            EnabledTeslaTeam.Add(Team.SCP);
                             Toggled = "enabled";
                         }
                         response = "The tesla has been " + Toggled + " for that team";

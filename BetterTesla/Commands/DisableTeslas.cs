@@ -1,17 +1,13 @@
 ﻿using System;
-    using System.Linq;
-
-    using CommandSystem;
-
-    using Exiled.API.Features;
-    using Exiled.API.Features.Items;
-
-    using RemoteAdmin;
-    using Exiled.Permissions.Extensions;
+using System.Linq;
+using CommandSystem;
+using Exiled.API.Features;
+using Exiled.API.Features.Items;
+using RemoteAdmin;
+using Exiled.Permissions.Extensions;
     
 namespace BetterTesla.Commands
 {
-    
     [CommandHandler(typeof(RemoteAdminCommandHandler))]
     class DisableTeslas : ICommand
     {
@@ -20,11 +16,10 @@ namespace BetterTesla.Commands
 
        public string[] Aliases { get; } = new string[] { "togteslas" };
 
-        public string Description { get; } = "A command for disabling teslas";
+       public string Description { get; } = "A command for disabling teslas";
 
-        public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response) 
-        {
-            
+       public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response) 
+       {
              Handlers = new Handlers();
               Player player = Player.Get(((CommandSender)sender).SenderId);
 
@@ -42,13 +37,8 @@ namespace BetterTesla.Commands
                       Handlers.ActivatedTeslas = true;
                       response = "Teslas Activated";
                       return true;
-
                   }
-
-      
-              }
-                
-              
-        }
+              }        
+       }
     }
 }
