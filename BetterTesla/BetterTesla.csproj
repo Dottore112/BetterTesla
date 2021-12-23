@@ -32,52 +32,43 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\..\Downloads\0Harmony.dll</HintPath>
+      <HintPath>..\..\..\References\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\..\Downloads\Assembly-CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Assembly-CSharp-firstpass%281%29">
-      <HintPath>..\..\..\..\..\Downloads\Assembly-CSharp-firstpass(1).dll</HintPath>
-    </Reference>
-    <Reference Include="Assembly-CSharp-Publicized%281%29">
-      <HintPath>..\..\..\..\..\Downloads\Assembly-CSharp-Publicized(1).dll</HintPath>
+      <HintPath>..\..\..\References\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="CommandSystem.Core">
-      <HintPath>..\..\..\Reference\CommandSystem.Core.dll</HintPath>
+      <HintPath>..\..\..\References\CommandSystem.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Exiled.API, Version=4.1.5.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\EXILED.4.1.5\lib\net472\Exiled.API.dll</HintPath>
+    <Reference Include="Exiled.API, Version=4.1.7.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\EXILED.4.1.7\lib\net472\Exiled.API.dll</HintPath>
     </Reference>
-    <Reference Include="Exiled.Bootstrap, Version=4.1.5.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\EXILED.4.1.5\lib\net472\Exiled.Bootstrap.dll</HintPath>
+    <Reference Include="Exiled.Bootstrap, Version=4.1.7.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\EXILED.4.1.7\lib\net472\Exiled.Bootstrap.dll</HintPath>
     </Reference>
-    <Reference Include="Exiled.CreditTags, Version=4.1.5.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\EXILED.4.1.5\lib\net472\Exiled.CreditTags.dll</HintPath>
+    <Reference Include="Exiled.CreditTags, Version=4.1.7.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\EXILED.4.1.7\lib\net472\Exiled.CreditTags.dll</HintPath>
     </Reference>
-    <Reference Include="Exiled.CustomItems, Version=4.1.5.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\EXILED.4.1.5\lib\net472\Exiled.CustomItems.dll</HintPath>
+    <Reference Include="Exiled.CustomItems, Version=4.1.7.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\EXILED.4.1.7\lib\net472\Exiled.CustomItems.dll</HintPath>
     </Reference>
-    <Reference Include="Exiled.CustomRoles, Version=4.1.5.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\EXILED.4.1.5\lib\net472\Exiled.CustomRoles.dll</HintPath>
+    <Reference Include="Exiled.CustomRoles, Version=4.1.7.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\EXILED.4.1.7\lib\net472\Exiled.CustomRoles.dll</HintPath>
     </Reference>
-    <Reference Include="Exiled.Events, Version=4.1.5.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\EXILED.4.1.5\lib\net472\Exiled.Events.dll</HintPath>
+    <Reference Include="Exiled.Events, Version=4.1.7.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\EXILED.4.1.7\lib\net472\Exiled.Events.dll</HintPath>
     </Reference>
-    <Reference Include="Exiled.Loader, Version=4.1.5.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\EXILED.4.1.5\lib\net472\Exiled.Loader.dll</HintPath>
+    <Reference Include="Exiled.Loader, Version=4.1.7.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\EXILED.4.1.7\lib\net472\Exiled.Loader.dll</HintPath>
     </Reference>
-    <Reference Include="Exiled.Permissions, Version=4.1.5.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\EXILED.4.1.5\lib\net472\Exiled.Permissions.dll</HintPath>
+    <Reference Include="Exiled.Permissions, Version=4.1.7.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\EXILED.4.1.7\lib\net472\Exiled.Permissions.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.Updater, Version=3.1.1.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\EXILED.4.1.5\lib\net472\Exiled.Updater.dll</HintPath>
-    </Reference>
-    <Reference Include="Mirror">
-      <HintPath>..\..\..\Reference\Mirror.dll</HintPath>
+      <HintPath>..\packages\EXILED.4.1.7\lib\net472\Exiled.Updater.dll</HintPath>
     </Reference>
     <Reference Include="NorthwoodLib">
-      <HintPath>..\..\..\Reference\NorthwoodLib.dll</HintPath>
+      <HintPath>..\..\..\References\NorthwoodLib.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -87,17 +78,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="UnityEngine">
-      <HintPath>..\..\..\Reference\UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AnimationModule">
-      <HintPath>..\..\..\Reference\UnityEngine.AnimationModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\Reference\UnityEngine.CoreModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>..\..\..\Reference\UnityEngine.PhysicsModule.dll</HintPath>
+      <HintPath>..\..\..\References\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
