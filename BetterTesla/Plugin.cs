@@ -1,17 +1,19 @@
 ﻿using Exiled.API.Features;
 using PlayerEvents = Exiled.Events.Handlers.Player;
 using ServerEvents = Exiled.Events.Handlers.Server;
-using HandlersS = Exiled.Events.Handlers;
-using Effect = CustomPlayerEffects.Deafened;
-using Effect1 = CustomPlayerEffects.Burned;
-
+using Scp079Handler = Exiled.Events.Handlers.Scp079;
+using System;
 
 namespace BetterTesla
 {
     public class Plugin : Plugin<Config>
     {
         public Handlers Handlers { get; private set; }
-        public Handlers H { get; private set; }
+        public override Version Version { get; } = new Version(1, 6, 2);
+        public override Version RequiredExiledVersion { get; } = new Version(4, 0, 0);
+        public override string Prefix { get; } = "BetterTesla";
+
+
 
         public static Plugin Singleton;
 
@@ -19,23 +21,10 @@ namespace BetterTesla
         {
             Singleton = this;
             Handlers = new Handlers();
-            Handlers.ActivatedTeslas = true;
             RegisterEvents();
+            DefaultVariables();
             base.OnEnabled();
-            Handlers.TeslaTimes = 0;
-            ActivatedTeams();
         }
-
-        public void ActivatedTeams() 
-        {
-              Handlers.MTFActivated = true;
-              Handlers.CHIActivated = true;
-              Handlers.SCPActivated = true;
-              Handlers.SciActivated = true;
-              Handlers.DBoiActivated = true;
-        }
-
-        
 
         public override void OnDisabled()
         {
@@ -45,28 +34,35 @@ namespace BetterTesla
 
         private void RegisterEvents()
         {
-                      
             PlayerEvents.TriggeringTesla += Handlers.OnTriggeringTesla;
             PlayerEvents.PickingUpItem += Handlers.PickItem;
             PlayerEvents.Dying += Handlers.Dying;
-            Exiled.Events.Handlers.Scp079.InteractingTesla += Handlers.Interact079Tesla;
-            
-            
-
-
+            Scp079Handler.InteractingTesla += Handlers.Interact079Tesla;
         }
-
 
         private void UnregisterEvents()
         {
             PlayerEvents.TriggeringTesla -= Handlers.OnTriggeringTesla; //using *nome a caso* = Exiled.Events.Handlers.Scp079; serve per registrare gli eventi 
-            Handlers.TeslaTimes = 0;     
             PlayerEvents.PickingUpItem -= Handlers.PickItem;
             PlayerEvents.Dying -= Handlers.Dying;
-            Exiled.Events.Handlers.Scp079.InteractingTesla -= Handlers.Interact079Tesla;
-
+            Scp079Handler.InteractingTesla -= Handlers.Interact079Tesla;
             Handlers = null;
-            
+        }
+
+        public void DefaultVariables()
+        {
+            Handlers.TeslaTimes = 0;
+            ActivatedTeams();
+            Handlers.ActivatedTeslas = true;
+        }
+
+        public void ActivatedTeams()
+        {
+            Handlers.MTFActivated = true;
+            Handlers.CHIActivated = true;
+            Handlers.SCPActivated = true;
+            Handlers.SciActivated = true;
+            Handlers.DBoiActivated = true;
         }
     }
 }
