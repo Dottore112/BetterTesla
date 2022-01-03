@@ -4,6 +4,7 @@ using System;
 using Handlers = Exiled.Events.Handlers;
 using Exiled.API.Enums;
 using System.Linq;
+using Exiled.API.Features;
 using Exiled.API.Extensions;
 using System.Collections.Generic;
 
@@ -13,7 +14,7 @@ namespace BetterTesla
     {
         public int Tesla079;
         public static bool ActivatedTeslas;
-        public static HashSet<Team> EnabledTeslaTeams = new HashSet<Team>();
+        public static HashSet<Team> DisabledTeslaTeam = new HashSet<Team>();
 
         public void Dying(DyingEventArgs ev)
         {
@@ -25,7 +26,7 @@ namespace BetterTesla
         {
             ev.IsTriggerable = ActivatedTeslas;
 
-            if(!EnabledTeslaTeams.Contains(ev.Player.Team))
+            if(DisabledTeslaTeam.Contains(ev.Player.Team))
                 ev.IsTriggerable = false;
 
             if (Plugin.Singleton.Config.TeslaDisableAtNoScp && Player.Get(Team.SCP).Count() == 0) 
@@ -41,7 +42,7 @@ namespace BetterTesla
         public void PickItem(PickingUpItemEventArgs ev) 
         {
             if(ev.Pickup.Type == Plugin.Singleton.Config.BypassTeslaItem)
-                ev.Player.Broadcast(Plugin.Singleton.Config.PickItemBC.Duration, Plugin.Singleton.Config.PickItemBC.Content, Broadcast.BroadcastFlags.Normal, true);
+                ev.Player.Broadcast(Plugin.Singleton.Config.PickItemBC);
         }
 
         public void Interact079Tesla(InteractingTeslaEventArgs ev)

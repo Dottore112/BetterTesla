@@ -10,7 +10,7 @@ namespace BetterTesla
     public class Plugin : Plugin<Config>
     {
         public Handlers Handlers { get; private set; }
-        public override Version Version { get; } = new Version(1, 6, 2);
+        public override Version Version { get; } = new Version(1, 6, 3);
         public override Version RequiredExiledVersion { get; } = new Version(4, 0, 0);
         public override string Prefix { get; } = "BetterTesla";
 
@@ -54,13 +54,6 @@ namespace BetterTesla
         {
             Handlers.Tesla079 = 0;
             Handlers.ActivatedTeslas = true;
-
-            Team[] DefTeam = {Team.MTF, Team.CHI, Team.RSC, Team.SCP, Team.CDP};
-            Handlers.EnabledTeslaTeams = new HashSet<Team>(DefTeam);
-            foreach (Team Team in Plugin.Singleton.Config.NoTriggerTesla) 
-            {
-                Handlers.EnabledTeslaTeams.Remove(Team);
-            }
         }  
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Exiled.API.Interfaces;
 using System.ComponentModel;
-using BC = Exiled.API.Features.Broadcast;
+using Exiled.API.Features;
 using System.Collections.Generic;
 
 namespace BetterTesla
@@ -17,10 +17,10 @@ namespace BetterTesla
         public bool IfBypassTeslaItem { get; set; } = false;
 
         [Description("If there is a bypass tesla item, what is that? (default = coin) Example: Coin. List (Pick the Name):https://pastebin.com/RUT27JBU")]
-        public ItemType BypassTeslaItem { get; set; }= ItemType.Coin;
+        public ItemType BypassTeslaItem { get; set; } = ItemType.Coin;
 
         [Description("Broadcast pickup item (If you don't want a broadcast for that, just erase the the BC content)")]
-        public BC PickItemBC { get; set; } = new BC(" <color=white> THIS ITEM WILL BYPASS TESLA </color>");
+        public Exiled.API.Features.Broadcast PickItemBC { get; set; } = new Exiled.API.Features.Broadcast(" <color=white> THIS ITEM WILL BYPASS TESLA </color>", 5);
 
         [Description("Cost for using Tesla for SCP 079 (default = 50)")]
         public int TeslaCost079 { get; set; } = 50;
