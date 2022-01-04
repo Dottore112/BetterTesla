@@ -14,7 +14,7 @@ This plugin permits to customize the teslas. Here all the functions:
 
 ## 079 Teslas 
 - You can set if 079 has a limit for triggering teslas, and how many
-- You can set how many energy it will take for triggering teslas
+- You can set how many energy it will take for triggering teslas!
 
 ## Commands
 - ToggleTeslas: You can toggle teslas (Active it/Disable it)
