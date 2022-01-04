@@ -4,7 +4,6 @@ using System;
 using Handlers = Exiled.Events.Handlers;
 using Exiled.API.Enums;
 using System.Linq;
-using Exiled.API.Features;
 using Exiled.API.Extensions;
 using System.Collections.Generic;
 
@@ -26,19 +25,26 @@ namespace BetterTesla
         {
             ev.IsTriggerable = ActivatedTeslas;
 
-            if(DisabledTeslaTeam.Contains(ev.Player.Team))
+            if (DisabledTeslaTeam.Contains(ev.Player.Team))
+            {
                 ev.IsTriggerable = false;
+                ev.IsInIdleRange = false;
+            }
 
-            if (Plugin.Singleton.Config.TeslaDisableAtNoScp && Player.Get(Team.SCP).Count() == 0) 
+            if (Plugin.Singleton.Config.TeslaDisableAtNoScp && Player.Get(Team.SCP).Count() == 0)
+            {
                 ev.IsTriggerable = false;
-
-            if (ev.Player.CurrentItem != null) 
+                ev.IsInIdleRange = false;
+            }
+            if (ev.Player.CurrentItem != null)
             {
                 if (ev.Player.CurrentItem.Type == Plugin.Singleton.Config.BypassTeslaItem && Plugin.Singleton.Config.IfBypassTeslaItem)
+                {
                     ev.IsTriggerable = false;
+                    ev.IsInIdleRange = false;
+                }
             }
         }
-        
         public void PickItem(PickingUpItemEventArgs ev) 
         {
             if(ev.Pickup.Type == Plugin.Singleton.Config.BypassTeslaItem)
