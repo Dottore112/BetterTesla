@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace BetterTesla
 {
-    public class Config : IConfig//b
+    public class Config : IConfig
     {
         [Description("Enable/Disable the Plugin.")]
         public bool IsEnabled { get; set; } = true;
