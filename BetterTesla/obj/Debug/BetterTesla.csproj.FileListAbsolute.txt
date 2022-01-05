@@ -41,7 +41,6 @@ C:\Users\asus\source\repos\Dottore112\BetterTesla\BetterTesla\obj\Debug\BetterTe
 C:\Users\asus\source\repos\Dottore112\BetterTesla\BetterTesla\obj\Debug\BetterTesla.dll
 C:\Users\asus\source\repos\Dottore112\BetterTesla\BetterTesla\obj\Debug\BetterTesla.pdb
 <<<<<<< HEAD
-<<<<<<< HEAD
 C:\Users\simon\source\repos\Dottore112\BetterTeslaB\BetterTesla\bin\Debug\BetterTesla.dll
 C:\Users\simon\source\repos\Dottore112\BetterTeslaB\BetterTesla\bin\Debug\BetterTesla.pdb
 C:\Users\simon\source\repos\Dottore112\BetterTeslaB\BetterTesla\bin\Debug\0Harmony.dll
@@ -72,8 +71,6 @@ C:\Users\simon\source\repos\Dottore112\BetterTeslaB\BetterTesla\obj\Debug\Better
 C:\Users\simon\source\repos\Dottore112\BetterTeslaB\BetterTesla\obj\Debug\BetterTesla.pdb
 C:\Users\simon\source\repos\Dottore112\BetterTeslaB\BetterTesla\obj\Debug\BetterTesla.csproj.AssemblyReference.cache
 =======
-=======
->>>>>>> 58a4f87197b53ef4d0c64db6b8f6bcb11ee962a4
 C:\Users\asus\source\repos\Dottore112\BetterTesla\BetterTesla\bin\Debug\BetterTesla.dll
 C:\Users\asus\source\repos\Dottore112\BetterTesla\BetterTesla\bin\Debug\BetterTesla.pdb
 C:\Users\asus\source\repos\Dottore112\BetterTesla\BetterTesla\bin\Debug\0Harmony.dll
@@ -99,7 +96,4 @@ C:\Users\asus\source\repos\Dottore112\BetterTesla\BetterTesla\bin\Debug\UnityEng
 C:\Users\asus\source\repos\Dottore112\BetterTesla\BetterTesla\bin\Debug\System.Memory.dll
 C:\Users\asus\source\repos\Dottore112\BetterTesla\BetterTesla\bin\Debug\System.Buffers.dll
 C:\Users\asus\source\repos\Dottore112\BetterTesla\BetterTesla\obj\Debug\BetterTesla.csproj.CopyComplete
-<<<<<<< HEAD
->>>>>>> 58a4f87197b53ef4d0c64db6b8f6bcb11ee962a4
-=======
 >>>>>>> 58a4f87197b53ef4d0c64db6b8f6bcb11ee962a4
