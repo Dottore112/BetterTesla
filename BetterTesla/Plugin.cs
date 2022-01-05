@@ -54,6 +54,6 @@ namespace BetterTesla
         {
             Handlers.Tesla079 = 0;
             Handlers.ActivatedTeslas = true;
-        }  
+        }
     }
 }

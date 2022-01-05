@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{44AA6CB6-B658-42DD-A3C7-3C450E92D06A}</ProjectGuid>
+    <ProjectGuid>{B6CC77D5-B1AF-4B4E-9AB4-0B0EE569E3D5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BetterTesla</RootNamespace>
@@ -21,7 +21,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,49 +32,49 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\..\Desktop\BetterTesla\References\0Harmony.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\BetterTesla\References\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\..\Desktop\BetterTesla\References\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\BetterTesla\References\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\..\..\..\..\Desktop\BetterTesla\References\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\BetterTesla\References\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-Publicized">
-      <HintPath>..\..\..\..\..\Desktop\BetterTesla\References\Assembly-CSharp-Publicized.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\BetterTesla\References\Assembly-CSharp-Publicized.dll</HintPath>
     </Reference>
     <Reference Include="CommandSystem.Core">
-      <HintPath>..\..\..\..\..\Desktop\BetterTesla\References\CommandSystem.Core.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\BetterTesla\References\CommandSystem.Core.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.API">
-      <HintPath>..\..\..\..\..\Desktop\BetterTesla\References\Exiled.API.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\BetterTesla\References\Exiled.API.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.CreditTags">
-      <HintPath>..\..\..\..\..\Desktop\BetterTesla\References\Exiled.CreditTags.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\BetterTesla\References\Exiled.CreditTags.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.CustomItems">
-      <HintPath>..\..\..\..\..\Desktop\BetterTesla\References\Exiled.CustomItems.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\BetterTesla\References\Exiled.CustomItems.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.CustomRoles">
-      <HintPath>..\..\..\..\..\Desktop\BetterTesla\References\Exiled.CustomRoles.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\BetterTesla\References\Exiled.CustomRoles.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.Events">
-      <HintPath>..\..\..\..\..\Desktop\BetterTesla\References\Exiled.Events.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\BetterTesla\References\Exiled.Events.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.Loader">
-      <HintPath>..\..\..\..\..\Desktop\BetterTesla\References\Exiled.Loader.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\BetterTesla\References\Exiled.Loader.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.Permissions">
-      <HintPath>..\..\..\..\..\Desktop\BetterTesla\References\Exiled.Permissions.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\BetterTesla\References\Exiled.Permissions.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.Updater">
-      <HintPath>..\..\..\..\..\Desktop\BetterTesla\References\Exiled.Updater.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\BetterTesla\References\Exiled.Updater.dll</HintPath>
     </Reference>
     <Reference Include="Mirror">
-      <HintPath>..\..\..\..\..\Desktop\BetterTesla\References\Mirror.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\BetterTesla\References\Mirror.dll</HintPath>
     </Reference>
     <Reference Include="NorthwoodLib">
-      <HintPath>..\..\..\..\..\Desktop\BetterTesla\References\NorthwoodLib.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\BetterTesla\References\NorthwoodLib.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -86,37 +85,31 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\..\Desktop\BetterTesla\References\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\BetterTesla\References\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AnimationModule">
-      <HintPath>..\..\..\..\..\Desktop\BetterTesla\References\UnityEngine.AnimationModule.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\BetterTesla\References\UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AudioModule">
-      <HintPath>..\..\..\..\..\Desktop\BetterTesla\References\UnityEngine.AudioModule.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\BetterTesla\References\UnityEngine.AudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\..\..\Desktop\BetterTesla\References\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\BetterTesla\References\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
-      <HintPath>..\..\..\..\..\Desktop\BetterTesla\References\UnityEngine.Networking.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\BetterTesla\References\UnityEngine.Networking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>..\..\..\..\..\Desktop\BetterTesla\References\UnityEngine.PhysicsModule.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\BetterTesla\References\UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\ToggleTeslaTeam.cs" />
     <Compile Include="Commands\DisableTeslas.cs" />
+    <Compile Include="Commands\ToggleTeslaTeams.cs" />
     <Compile Include="Handlers.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
