@@ -30,14 +30,13 @@ namespace BetterTesla
         {
             ev.IsTriggerable = ActivatedTeslas;
 
-
             if(ev.Player.Role == RoleType.Scp079) 
             {
                 ev.IsTriggerable = false;
                 ev.IsInIdleRange = false;
                 return;
             }
-
+            
             if (DisabledTeslaTeam.Contains(ev.Player.Team) || Plugin.Singleton.Config.NoTriggerTesla.Contains(ev.Player.Team))
             {
                 ev.IsTriggerable = false;
