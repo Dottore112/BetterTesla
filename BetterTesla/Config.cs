@@ -13,6 +13,9 @@ namespace BetterTesla
         [Description("Teams that should not active the teslas. Teams here: https://controlc.com/4ff2b452")]
         public List<Team> NoTriggerTesla { get; set; } = new List<Team>() { Team.MTF };
 
+        [Description("Message of Death for Tesla (default: You have been caught by a Tesla Gate")]
+        public string DeathMessage { get; set; } = "You have been caught by a Tesla Gate";
+
         [Description("Is There an Item that bypass the Teslas? (default = false) [true/false]")]
         public bool IfBypassTeslaItem { get; set; } = false;
 
