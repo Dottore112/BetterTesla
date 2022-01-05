@@ -6,7 +6,6 @@ using Exiled.API.Enums;
 using System.Linq;
 using Exiled.API.Extensions;
 using System.Collections.Generic;
-using MEC;
 
 namespace BetterTesla
 {
@@ -18,18 +17,16 @@ namespace BetterTesla
 
         public void Dying(DyingEventArgs ev)
         {
-            if (ev.Handler.Type == DamageType.Tesla)
+            if (ev.Handler.Type == DamageType.Tesla && Plugin.Singleton.Config.InventoryErase)
             {
-                if (Plugin.Singleton.Config.InventoryErase)
-                {
-                    ev.Target.ClearInventory();
-                    ev.IsAllowed = false;
-                    ev.Target.Kill(Plugin.Singleton.Config.DeathMessage);
-                } else
-                {
-                    ev.IsAllowed = false;
-                    ev.Target.Kill(Plugin.Singleton.Config.DeathMessage);
-                }
+                ev.Target.ClearInventory();
+                ev.IsAllowed = false;
+                ev.Target.Kill(Plugin.Singleton.Config.DeathMessage);
+            }
+            else if (ev.Handler.Type == DamageType.Tesla)
+            {
+                ev.IsAllowed = false;
+                ev.Target.Kill(Plugin.Singleton.Config.DeathMessage);
             }
         }
 
