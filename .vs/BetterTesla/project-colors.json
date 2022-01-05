@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "44aa6cb6-b658-42dd-a3c7-3c450e92d06a": {
+      "ProjectGuid": "44aa6cb6-b658-42dd-a3c7-3c450e92d06a",
+      "DisplayName": "BetterTesla",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "File esterni",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}

@@ -36,3 +36,7 @@ C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\obj\Debug
 C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\obj\Debug\BetterTesla.csproj.CopyComplete
 C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\obj\Debug\BetterTesla.dll
 C:\Users\simon\OneDrive\Desktop\NewBetterTesla\BetterTesla\BetterTesla\obj\Debug\BetterTesla.pdb
+C:\Users\asus\source\repos\Dottore112\BetterTesla\BetterTesla\obj\Debug\BetterTesla.csproj.AssemblyReference.cache
+C:\Users\asus\source\repos\Dottore112\BetterTesla\BetterTesla\obj\Debug\BetterTesla.csproj.CoreCompileInputs.cache
+C:\Users\asus\source\repos\Dottore112\BetterTesla\BetterTesla\obj\Debug\BetterTesla.dll
+C:\Users\asus\source\repos\Dottore112\BetterTesla\BetterTesla\obj\Debug\BetterTesla.pdb

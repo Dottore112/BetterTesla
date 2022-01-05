@@ -11,6 +11,7 @@ namespace BetterTesla
 {
     public class Handlers
     {
+        public int Test;
         public int Tesla079;
         public static bool ActivatedTeslas;
         public static HashSet<Team> DisabledTeslaTeam = new HashSet<Team>();
