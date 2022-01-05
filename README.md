@@ -11,6 +11,7 @@ This plugin permits to customize the teslas. Here all the functions:
 
 ## Player Managing
 - You can set if, at die by tesla, a person inventory will be erased
+- Also, when you die by tesla, you can set the reason of die
 
 ## 079 Teslas 
 - You can set if 079 has a limit for triggering teslas, and how many
