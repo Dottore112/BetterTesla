@@ -20,7 +20,7 @@ namespace BetterTesla
         public bool IfBypassTeslaItem { get; set; } = false;
 
         [Description("If there is a bypass tesla item, what is that? (default = coin) Example: Coin. List (Pick the Name):https://pastebin.com/RUT27JBU")]
-        public ItemType BypassTeslaItem { get; set; } = ItemType.Coin;
+        public HashSet<ItemType> BypassTeslaItem { get; set; } = new HashSet<ItemType>() { ItemType.Coin };
 
         [Description("Broadcast pickup item (If you don't want a broadcast for that, just erase the the BC content)")]
         public Exiled.API.Features.Broadcast PickItemBC { get; set; } = new Exiled.API.Features.Broadcast(" <color=white> THIS ITEM WILL BYPASS TESLA </color>", 5);

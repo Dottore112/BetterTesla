@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{74AB68F1-BC09-4A0A-BA68-FED7A1CE2AC3}</ProjectGuid>
+    <ProjectGuid>{44AA6CB6-B658-42DD-A3C7-3C450E92D06A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BetterTesla</RootNamespace>
@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -32,49 +33,49 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\OneDrive\Desktop\dll speciali\0Harmony.dll</HintPath>
+      <HintPath>..\..\..\dll speciali\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\OneDrive\Desktop\dll speciali\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\dll speciali\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\..\..\..\OneDrive\Desktop\dll speciali\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>..\..\..\dll speciali\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-Publicized">
-      <HintPath>..\..\..\..\OneDrive\Desktop\dll speciali\Assembly-CSharp-Publicized.dll</HintPath>
+      <HintPath>..\..\..\dll speciali\Assembly-CSharp-Publicized.dll</HintPath>
     </Reference>
     <Reference Include="CommandSystem.Core">
-      <HintPath>..\..\..\..\OneDrive\Desktop\dll speciali\CommandSystem.Core.dll</HintPath>
+      <HintPath>..\..\..\dll speciali\CommandSystem.Core.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.API">
-      <HintPath>..\..\..\..\OneDrive\Desktop\dll speciali\Exiled.API.dll</HintPath>
+      <HintPath>..\..\..\dll speciali\Exiled.API.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.CreditTags">
-      <HintPath>..\..\..\..\OneDrive\Desktop\dll speciali\Exiled.CreditTags.dll</HintPath>
+      <HintPath>..\..\..\dll speciali\Exiled.CreditTags.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.CustomItems">
-      <HintPath>..\..\..\..\OneDrive\Desktop\dll speciali\Exiled.CustomItems.dll</HintPath>
+      <HintPath>..\..\..\dll speciali\Exiled.CustomItems.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.CustomRoles">
-      <HintPath>..\..\..\..\OneDrive\Desktop\dll speciali\Exiled.CustomRoles.dll</HintPath>
+      <HintPath>..\..\..\dll speciali\Exiled.CustomRoles.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.Events">
-      <HintPath>..\..\..\..\OneDrive\Desktop\dll speciali\Exiled.Events.dll</HintPath>
+      <HintPath>..\..\..\dll speciali\Exiled.Events.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.Loader">
-      <HintPath>..\..\..\..\OneDrive\Desktop\dll speciali\Exiled.Loader.dll</HintPath>
+      <HintPath>..\..\..\dll speciali\Exiled.Loader.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.Permissions">
-      <HintPath>..\..\..\..\OneDrive\Desktop\dll speciali\Exiled.Permissions.dll</HintPath>
+      <HintPath>..\..\..\dll speciali\Exiled.Permissions.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.Updater">
-      <HintPath>..\..\..\..\OneDrive\Desktop\dll speciali\Exiled.Updater.dll</HintPath>
+      <HintPath>..\..\..\dll speciali\Exiled.Updater.dll</HintPath>
     </Reference>
     <Reference Include="Mirror">
-      <HintPath>..\..\..\..\OneDrive\Desktop\dll speciali\Mirror.dll</HintPath>
+      <HintPath>..\..\..\dll speciali\Mirror.dll</HintPath>
     </Reference>
     <Reference Include="NorthwoodLib">
-      <HintPath>..\..\..\..\OneDrive\Desktop\dll speciali\NorthwoodLib.dll</HintPath>
+      <HintPath>..\..\..\dll speciali\NorthwoodLib.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -85,31 +86,37 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\OneDrive\Desktop\dll speciali\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\dll speciali\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AnimationModule">
-      <HintPath>..\..\..\..\OneDrive\Desktop\dll speciali\UnityEngine.AnimationModule.dll</HintPath>
+      <HintPath>..\..\..\dll speciali\UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AudioModule">
-      <HintPath>..\..\..\..\OneDrive\Desktop\dll speciali\UnityEngine.AudioModule.dll</HintPath>
+      <HintPath>..\..\..\dll speciali\UnityEngine.AudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\..\OneDrive\Desktop\dll speciali\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\..\..\dll speciali\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
-      <HintPath>..\..\..\..\OneDrive\Desktop\dll speciali\UnityEngine.Networking.dll</HintPath>
+      <HintPath>..\..\..\dll speciali\UnityEngine.Networking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>..\..\..\..\OneDrive\Desktop\dll speciali\UnityEngine.PhysicsModule.dll</HintPath>
+      <HintPath>..\..\..\dll speciali\UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\DisableTeams.cs" />
-    <Compile Include="Commands\ToggleTeslaTeam.cs" />
+    <Compile Include="Commands\ToggleTeslaTeams.cs" />
+    <Compile Include="Commands\DisableTeslas.cs" />
     <Compile Include="Handlers.cs" />
-    <Compile Include="Plugin.cs" />
     <Compile Include="Config.cs" />
+    <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

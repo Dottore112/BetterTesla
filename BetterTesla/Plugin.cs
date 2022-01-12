@@ -10,11 +10,11 @@ namespace BetterTesla
     public class Plugin : Plugin<Config>
     {
         public Handlers Handlers { get; private set; }
-        public override Version Version { get; } = new Version(1, 7, 2);
+        public override Version Version { get; } = new Version(1, 7, 3);
         public override Version RequiredExiledVersion { get; } = new Version(4, 0, 0);
         public override string Prefix { get; } = "BetterTesla";
 
-
+        
 
         public static Plugin Singleton;
 
@@ -23,7 +23,6 @@ namespace BetterTesla
             Singleton = this;
             Handlers = new Handlers();
             RegisterEvents();
-            SetVariables();
             base.OnEnabled();
         }
 
@@ -43,17 +42,13 @@ namespace BetterTesla
 
         private void UnregisterEvents()
         {
-            PlayerEvents.TriggeringTesla -= Handlers.OnTriggeringTesla; //using *nome a caso* = Exiled.Events.Handlers.Scp079; serve per registrare gli eventi 
+            PlayerEvents.TriggeringTesla -= Handlers.OnTriggeringTesla; 
             PlayerEvents.PickingUpItem -= Handlers.PickItem;
             PlayerEvents.Dying -= Handlers.Dying;
             Scp079Handler.InteractingTesla -= Handlers.Interact079Tesla;
             Handlers = null;
         }
-
-        public void SetVariables()
-        {
-            Handlers.Tesla079 = 0;
-            Handlers.ActivatedTeslas = true;
-        }
     }
+
+    
 }
