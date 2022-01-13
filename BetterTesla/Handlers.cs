@@ -19,7 +19,7 @@ namespace BetterTesla
         {
             if (ev.Handler.Type == DamageType.Tesla)
             {
-                if(Plugin.Singleton.Config.InventoryErase) 
+                if (Plugin.Singleton.Config.InventoryErase)
                 {
                     ev.Target.ClearInventory();
                 }
@@ -59,11 +59,7 @@ namespace BetterTesla
                     ev.IsAllowed = false;
                     return;
                 }
-                else if (Tesla079 < Plugin.Singleton.Config.Tesla079Limit)
-                {
-                    ev.IsAllowed = true;
-                    Tesla079++;
-                }
+                Tesla079++;
             }
         }
     }

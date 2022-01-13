@@ -14,7 +14,7 @@ namespace BetterTesla
         public override Version RequiredExiledVersion { get; } = new Version(4, 0, 0);
         public override string Prefix { get; } = "BetterTesla";
 
-        
+
 
         public static Plugin Singleton;
 
@@ -42,7 +42,7 @@ namespace BetterTesla
 
         private void UnregisterEvents()
         {
-            PlayerEvents.TriggeringTesla -= Handlers.OnTriggeringTesla; 
+            PlayerEvents.TriggeringTesla -= Handlers.OnTriggeringTesla;
             PlayerEvents.PickingUpItem -= Handlers.PickItem;
             PlayerEvents.Dying -= Handlers.Dying;
             Scp079Handler.InteractingTesla -= Handlers.Interact079Tesla;
@@ -50,5 +50,5 @@ namespace BetterTesla
         }
     }
 
-    
+
 }
