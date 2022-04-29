@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Linq;
 using CommandSystem;
-using Exiled.API.Features;
-using Exiled.API.Features.Items;
-using RemoteAdmin;
 using Exiled.Permissions.Extensions;
-
+    
 namespace BetterTesla.Commands
 {
     [CommandHandler(typeof(RemoteAdminCommandHandler))]
@@ -17,22 +13,16 @@ namespace BetterTesla.Commands
 
         public string Description { get; } = "A command for disabling teslas";
 
-        public string toggled()
-        {
-            string msg;
-            msg = Handlers.ActivatedTeslas ? msg = "Activated" : msg = "Disabled";
-            return msg;
-        }
-
-        public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
+        public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response) 
         {
             if (!sender.CheckPermission("bettertesla.toggleteslas"))
             {
-                response = "You cannot do that!";
+                response = "You don't have the permissions to use this command.";
                 return false;
             }
-            Handlers.ActivatedTeslas = !Handlers.ActivatedTeslas ? true : false;
-            response = "Teslas " + toggled();
+
+            Handlers.TeslasEnabled = !Handlers.TeslasEnabled;
+            response = "Teslas " + (Handlers.TeslasEnabled ? "Activated" : "Disabled");
             return true;
         }
     }

@@ -1,6 +1,6 @@
 ﻿using Exiled.API.Interfaces;
 using System.ComponentModel;
-using Exiled.API.Features;
+using Features = Exiled.API.Features;
 using System.Collections.Generic;
 
 namespace BetterTesla
@@ -10,34 +10,34 @@ namespace BetterTesla
         [Description("Enable/Disable the Plugin.")]
         public bool IsEnabled { get; set; } = true;
 
-        [Description("Teams that should not active the teslas. Teams here: https://controlc.com/4ff2b452")]
-        public List<Team> NoTriggerTesla { get; set; } = new List<Team>() { Team.MTF };
+        [Description("Teams that shouldn't trigger teslas. Team Names: https://controlc.com/4ff2b452")]
+        public List<Team> /* DisabledTeslaTeams */ NoTriggerTesla { get; set; } = new List<Team>() { Team.MTF };
 
-        [Description("Message of Death for Tesla (default: You have been caught by a Tesla Gate")]
-        public string DeathMessage { get; set; } = "You have been caught by a Tesla Gate";
+        [Description("Teslas Death Message (default: \"You have been caught by a Tesla Gate\"")]
+        public string /* TeslaDeathMessage */ DeathMessage { get; set; } = "You have been caught by a Tesla Gate";
 
-        [Description("Is There an Item that bypass the Teslas? (default = false) [true/false]")]
-        public bool IfBypassTeslaItem { get; set; } = false;
+        [Description("Enable Item Tesla Bypass (default = false) [true/false]")]
+        public bool /* EnableTeslaItemBypass */ IfBypassTeslaItem { get; set; } = false;
 
-        [Description("If there is a bypass tesla item, what is that? (default = coin) Example: Coin. List (Pick the Name):https://pastebin.com/RUT27JBU")]
-        public HashSet<ItemType> BypassTeslaItem { get; set; } = new HashSet<ItemType>() { ItemType.Coin };
+        [Description("List of Items that Bypass Teslas (default = \"coin\"). Item Names: https://pastebin.com/RUT27JBU")]
+        public List<ItemType> /* TeslaBypassItems */ BypassTeslaItem { get; set; } = new List<ItemType>() { ItemType.Coin };
 
-        [Description("Broadcast pickup item (If you don't want a broadcast for that, just erase the the BC content)")]
-        public Exiled.API.Features.Broadcast PickItemBC { get; set; } = new Exiled.API.Features.Broadcast(" <color=white> THIS ITEM WILL BYPASS TESLA </color>", 5);
+        [Description("Broadcast for when a player picks up a Tesla Bypass Item (You can use an empy string as the Broadcast to disable it)")]
+        public Features::Broadcast /* TeslaBypassItemPickupBroadcast */ PickItemBC { get; set; } = new Features::Broadcast("<color=white> YOU'VE PICKED UP AN ITEM THAT BYPASSES TESLAS </color>", 5);
 
-        [Description("Cost for using Tesla for SCP 079 (default = 50)")]
-        public int TeslaCost079 { get; set; } = 50;
+        [Description("Cost for triggering Teslas as SCP 079 (default = 50)")]
+        public int /* TeslaSCP079Cost */ TeslaCost079 { get; set; } = 50;
 
-        [Description("When a player dies by tesla, it should erase his inventory? (default = false)")]
-        public bool InventoryErase { get; set; } = false;
+        [Description("Whether or not the Inventory of a Player who died by a Tesla should be cleared (default = false)")]
+        public bool /* ClearInventoryOnTeslaDeath */ InventoryErase { get; set; } = false;
 
-        [Description("Has 079 a limit for how many teslas it can trigger? (default = false)")]
-        public bool IfTesla079Limit { get; set; } = false;
+        [Description("Whether or not SCP079 should have a limit of how many Teslas it can trigger (default = false)")]
+        public bool /* EnableSCP079TeslaLimit */ IfTesla079Limit { get; set; } = false;
 
-        [Description("If Teslas079Limit is true, set the limit for 079 (default = 15)")]
-        public int Tesla079Limit { get; set; } = 15;
+        [Description("The Limit of Teslas that can be triggered by SCP079 (default = 15)")]
+        public int /* SCP079TeslaLimit */ Tesla079Limit { get; set; } = 15;
 
-        [Description("If there isn't any SCP left, should be the teslas disabled? (default = false)")]
-        public bool TeslaDisableAtNoScp { get; set; } = false;
+        [Description("Whether or not Teslas can be Enabled if no SCP is Left (default = false)")]
+        public bool /* DisableTeslasWithNoSCP */ TeslaDisableAtNoScp { get; set; } = false;
     }
 }

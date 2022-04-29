@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("BetterTesla")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Dottore & MaxPlay066")]
+[assembly: AssemblyCompany("Dottore")]
 [assembly: AssemblyProduct("BetterTesla")]
-[assembly: AssemblyCopyright("Copyright ©  2022")]
+[assembly: AssemblyCopyright("Copyright ©  2021 by Dottore")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Se il progetto viene esposto a COM, il GUID seguente verrà utilizzato come ID della libreria dei tipi
-[assembly: Guid("b6cc77d5-b1af-4b4e-9ab4-0b0ee569e3d5")]
+[assembly: Guid("44aa6cb6-b658-42dd-a3c7-3c450e92d06a")]
 
 // Le informazioni sulla versione di un assembly sono costituite dai seguenti quattro valori:
 //

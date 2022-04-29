@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Linq;
 using CommandSystem;
 using System.Collections.Generic;
-using Exiled.API.Features;
-using Exiled.API.Features.Items;
-using RemoteAdmin;
 using Exiled.Permissions.Extensions;
 
 namespace BetterTesla.Commands
@@ -13,44 +9,43 @@ namespace BetterTesla.Commands
     class ToggleTeslaTeams : ICommand
     {
         HashSet<Team> DisabledTeslaTeam = Handlers.DisabledTeslaTeam;
-
+        
         public string Command { get; } = "toggleteslateam";
 
         public string[] Aliases { get; } = new string[] { "tggttm", "togglettm", "toggleteslatm", "tggteslateam" };
 
         public string Description { get; } = "A command for disabling teslas for teams";
 
-        public string toggled(Team team)
-        {
-            string msg;
-            msg = DisabledTeslaTeam.Contains(team) ? "disabled" : "enabled";
-            return msg;
-        }
-
         public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
+            Team team;
             if (!sender.CheckPermission("bettertesla.toggleteslateam"))
             {
-                response = "You can't use that command";
+                response = "You don't have the permissions to use this command.";
                 return false;
             }
-            if (arguments.Count != 1)
+            else if (
+                // No Arguments Provided
+                arguments.Count != 1 ||
+                // Invalid Team
+                // TODO: Add a different response for invalid team
+                !Enum.TryParse(arguments.At(0), true, out team)
+            ) {
+                response = "Command Usage: " + Command + " <team>\n"
+                    + "Aliases: " + String.Join(", ", Aliases) + "\n"
+                    + "Teams: CHI - MTF - CDP (ClassD) - RSC (Scientist) - SCP";
+                return false;
+            }
+            else if (DisabledTeslaTeam.Contains(team))
             {
-                response = "Here how you use it: " + "(command) (team)" + "\nCommands that you can use for same function:" + "\ntggtm - togglettm - toggleteslatm - tggteslateam - toggleteslateam" +
-                "\nTeams: CHI - MTF - CDP (ClassD) - RSC (Scientist) - SCP";
-                return false;
-
+                DisabledTeslaTeam.Add(team);
             }
-            if (!Enum.TryParse(arguments.At(0), true, out Team team))
+            else
             {
-                response = "Here how you use it: " + "(command) (team)" + "\nCommands that you can use for same function:" + "\ntggtm - togglettm - toggleteslatm - tggteslateam - toggleteslateam" +
-            "\nTeams: CHI - MTF - CDP (ClassD) - RSC (Scientist) - SCP";
-                return false;
+                DisabledTeslaTeam.Remove(team);
             }
-
-            _ = DisabledTeslaTeam.Contains(team) ? DisabledTeslaTeam.Remove(team) : DisabledTeslaTeam.Add(team);
-
-            response = "Teslas " + toggled(team) + "for " + team.ToString();
+            
+            response = "Tesla toggled for " + team;
             return true;
         }
     }
